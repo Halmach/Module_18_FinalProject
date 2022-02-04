@@ -1,8 +1,10 @@
-﻿namespace Module_18_FinalProject
+﻿using System.Threading.Tasks;
+
+namespace Module_18_FinalProject
 {
     internal interface ICommand
     {
-        public void Execute();
+        public  Task ExecuteAsync();
 
         public void Cancel();
     }

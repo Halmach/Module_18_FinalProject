@@ -18,7 +18,7 @@ namespace Module_18_FinalProject
 
         public void Execute()
         {
-            command.Execute();
+            command.ExecuteAsync();
         }
 
         public void Cancel()

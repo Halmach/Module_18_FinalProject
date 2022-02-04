@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Module_18_FinalProject
 {
-    class VideoDescriptionCommand : ICommand
+    class VideoDescriptionCommand : Command, ICommand
     {
-        YoutubeService Service;
-        public VideoDescriptionCommand(YoutubeService service)
+        public VideoDescriptionCommand(YoutubeService service) : base(service)
         {
-            Service = service;
         }
 
         public void Cancel()
@@ -17,9 +16,9 @@ namespace Module_18_FinalProject
             throw new NotImplementedException();
         }
 
-        public void Execute()
+        public async Task ExecuteAsync()
         {
-            Service.GetVideoDescriptionAsync();
+            await Service.GetVideoDescriptionAsync();
         }
     }
 }

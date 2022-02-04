@@ -16,7 +16,7 @@ namespace Module_18_FinalProject
                 Console.WriteLine("Выберите пункт меню:");
                 Console.WriteLine("1 - Отобразить описание видео");
                 Console.WriteLine("2 - Скачать видео");
-                Console.WriteLine("3 - Выйти и программы");
+                Console.WriteLine("3 - Выйти из программы");
 
                 var selectedCommand = Console.ReadLine();
                 switch(selectedCommand.Trim().ToLower())
